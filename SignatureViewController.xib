@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignatureViewController">
+            <connections>
+                <outlet property="signView" destination="wPS-0x-fcG" id="JZW-4u-0Hh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPS-0x-fcG">
+                    <rect key="frame" x="16" y="100" width="343" height="450"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKj-ED-k4o">
+                    <rect key="frame" x="16" y="581" width="90" height="30"/>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="WZ2-6j-Hmg"/>
+                        <constraint firstAttribute="height" constant="30" id="hHh-8F-ZTi"/>
+                    </constraints>
+                    <state key="normal" title="确定"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="confirm:" destination="-1" eventType="touchUpInside" id="Loe-sU-YPm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51B-cm-lYZ">
+                    <rect key="frame" x="269" y="581" width="90" height="30"/>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="7tH-qI-AND"/>
+                        <constraint firstAttribute="height" constant="30" id="t5Q-6w-geX"/>
+                    </constraints>
+                    <state key="normal" title="取消"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="t0d-0j-oZK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在下方区域内签名！！！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWt-0Q-8Pi">
+                    <rect key="frame" x="83.5" y="37" width="208" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="vKS-vT-L0G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wPS-0x-fcG" firstAttribute="top" secondItem="nWt-0Q-8Pi" secondAttribute="bottom" constant="42" id="FQU-It-Lxp"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nWt-0Q-8Pi" secondAttribute="trailing" constant="83.5" id="JuP-yT-Zpe"/>
+                <constraint firstItem="nWt-0Q-8Pi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="83.5" id="X84-rL-I9q"/>
+                <constraint firstItem="nWt-0Q-8Pi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="17" id="Z4w-im-zT4"/>
+                <constraint firstItem="wPS-0x-fcG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bU4-IW-hip"/>
+                <constraint firstItem="bKj-ED-k4o" firstAttribute="top" secondItem="wPS-0x-fcG" secondAttribute="bottom" constant="31" id="bn1-Qy-Gp7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="wPS-0x-fcG" secondAttribute="trailing" constant="16" id="e1W-5v-z1c"/>
+                <constraint firstItem="nWt-0Q-8Pi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ebU-bD-RZ0"/>
+                <constraint firstItem="wPS-0x-fcG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="edT-Er-lu2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="51B-cm-lYZ" secondAttribute="bottom" constant="56" id="feu-E9-taI"/>
+                <constraint firstItem="bKj-ED-k4o" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="h2O-7A-Xnc"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="51B-cm-lYZ" secondAttribute="trailing" constant="16" id="iht-Yj-cCY"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="bKj-ED-k4o" secondAttribute="bottom" constant="56" id="rYv-dg-JN4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NeedSignViewController">
+            <connections>
+                <outlet property="signView" destination="XKa-XE-dgr" id="gv5-U5-9UC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKa-XE-dgr">
+                    <rect key="frame" x="50" y="206" width="275" height="180"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="64m-8L-Ho9"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="AWW-uH-Rpd"/>
+                        <constraint firstAttribute="width" constant="275" id="AeC-AF-9E8"/>
+                        <constraint firstAttribute="width" secondItem="XKa-XE-dgr" secondAttribute="height" multiplier="55:36" id="ED2-Cz-KEi"/>
+                        <constraint firstAttribute="height" constant="180" id="vyM-kM-Odb"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W35-He-Tyg">
+                    <rect key="frame" x="87.5" y="444" width="199" height="45"/>
+                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="点我签名"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="jump:" destination="-1" eventType="touchUpInside" id="x2Q-GB-QXi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLh-5F-VUp">
+                    <rect key="frame" x="88" y="110" width="199" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="199" id="Ogc-ba-CmA"/>
+                        <constraint firstAttribute="height" constant="45" id="j8y-vU-P0H"/>
+                    </constraints>
+                    <state key="normal" title="对您有帮助的话，希望给个赞"/>
+                    <connections>
+                        <action selector="helpSign:" destination="-1" eventType="touchUpInside" id="RHz-y6-RxA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hLh-5F-VUp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LzP-nH-7Ka"/>
+                <constraint firstItem="XKa-XE-dgr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ULz-f7-FIV"/>
+                <constraint firstItem="XKa-XE-dgr" firstAttribute="top" secondItem="hLh-5F-VUp" secondAttribute="bottom" constant="51" id="WCY-Yn-gIC"/>
+                <constraint firstItem="hLh-5F-VUp" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="90" id="b1v-1R-kEm"/>
+                <constraint firstItem="W35-He-Tyg" firstAttribute="height" secondItem="hLh-5F-VUp" secondAttribute="height" id="edS-oJ-tMo"/>
+                <constraint firstItem="W35-He-Tyg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qAF-5U-TDe"/>
+                <constraint firstItem="W35-He-Tyg" firstAttribute="width" secondItem="hLh-5F-VUp" secondAttribute="width" id="qIr-ep-X1Q"/>
+                <constraint firstItem="W35-He-Tyg" firstAttribute="top" secondItem="XKa-XE-dgr" secondAttribute="bottom" constant="58" id="uyD-wr-VhT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
